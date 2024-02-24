@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/cpsoinos/vite-plugin-http2-proxy"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": "Corey Psoinos <coreypsoinos@gmail.com>",
   "exports": {
     ".": {
