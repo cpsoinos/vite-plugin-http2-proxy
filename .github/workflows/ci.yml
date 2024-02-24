@@ -1,0 +1,76 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  CI: true
+
+jobs:
+  eslint:
+    name: ESLint
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+
+      - name: setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: ESLint
+        run: pnpm lint
+
+  prettier:
+    name: Prettier
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+
+      - name: setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Prettier
+        run: pnpm ci:format
+
+  changeset:
+    name: Changeset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_PAT }} # Needed to trigger CI when changes made
+
+      - name: Create/Update Changesets
+        uses: 'the-guild-org/changesets-dependencies-action@v1.2.2'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # Needed to trigger CI when changes made
