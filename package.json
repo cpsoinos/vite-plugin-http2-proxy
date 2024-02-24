@@ -18,7 +18,7 @@
     "url": "git+https://github.com/cpsoinos/vite-plugin-http2-proxy"
   },
   "license": "ISC",
-  "author": "cpsoinos <coreypsoinos@gmail.com>",
+  "author": "Corey Psoinos <coreypsoinos@gmail.com>",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
