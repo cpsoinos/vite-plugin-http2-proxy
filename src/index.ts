@@ -1,3 +1,4 @@
+import type { IncomingMessage } from 'http'
 import proxy, { type http1WebOptions } from 'http2-proxy'
 import type { Plugin, ProxyOptions } from 'vite'
 
@@ -41,7 +42,7 @@ export const http2ProxyPlugin = (options: Options = {}): Plugin => {
         middlewares.use(route, (req, res) => {
           const path = rewrite ? rewrite(req.originalUrl!) : req.originalUrl
 
-          proxy.web(req, res, { ...proxyOptions, path }, (err) => {
+          proxy.web(req as IncomingMessage, res, { ...proxyOptions, path }, (err) => {
             if (err && !options.quiet) {
               logger.error(`[http2-proxy] Error when proxying request on '${req.originalUrl}'`, {
                 timestamp: true,
