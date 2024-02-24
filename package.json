@@ -1,14 +1,15 @@
 {
-  "name": "vite-plugin-http2-proxy",
+  "name": "@cpsoinos/vite-plugin-http2-proxy",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Vite plugin that allows you to proxy requests to an HTTP2 server.",
   "keywords": [
     "vite",
     "vite-plugin",
     "http2",
     "http2-proxy",
     "proxy",
-    "https-proxy"
+    "https-proxy",
+    "vite-plugin-http2-proxy"
   ],
   "bugs": {
     "url": "https://github.com/cpsoinos/vite-plugin-http2-proxy/issues"
