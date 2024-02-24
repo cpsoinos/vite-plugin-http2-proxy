@@ -1,6 +1,6 @@
 {
   "name": "@cpsoinos/vite-plugin-http2-proxy",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Vite plugin that allows you to proxy requests to an HTTP2 server.",
   "keywords": [
     "vite",
