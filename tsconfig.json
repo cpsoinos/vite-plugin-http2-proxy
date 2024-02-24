@@ -3,11 +3,13 @@
     "target": "ESNext",
     "lib": ["esnext", "DOM"],
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "strict": true,
     "strictNullChecks": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "exclude": ["dist", "eslint.config.js"]
 }
