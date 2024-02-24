@@ -1,5 +1,9 @@
 # vite-plugin-http2-proxy
 
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![license][license-src]][license-href]
+
 Run an HTTP2 proxy in development mode with Vite. Works great when paired with [vite-plugin-mkcert](https://github.com/liuweiGL/vite-plugin-mkcert).
 
 ## Why would I use this?
@@ -75,3 +79,12 @@ Give a ⭐️ if this project helped you!
 Copyright © 2024 [Corey Psoinos](https://github.com/cpsoinos).
 
 This project is [MIT](https://github.com/cpsoinos/nuxt-svgo/blob/main/LICENSE) licensed.
+
+<!-- Badges -->
+
+[npm-version-src]: https://img.shields.io/npm/v/@cpsoinos/vite-plugin-http2-proxy/latest.svg?style=flat-square
+[npm-version-href]: https://npmjs.com/package/@cpsoinos/vite-plugin-http2-proxy
+[npm-downloads-src]: https://img.shields.io/npm/dt/@cpsoinos/vite-plugin-http2-proxy.svg?style=flat-square
+[npm-downloads-href]: https://npmjs.com/package/@cpsoinos/vite-plugin-http2-proxy
+[license-src]: https://img.shields.io/npm/l/@cpsoinos/vite-plugin-http2-proxy.svg?style=flat-square
+[license-href]: https://github.com/cpsoinos/vite-plugin-http2-proxy/blob/main/LICENSE
