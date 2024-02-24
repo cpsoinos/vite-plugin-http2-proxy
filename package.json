@@ -2,24 +2,6 @@
   "name": "vite-plugin-http2-proxy",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
-  },
-  "scripts": {
-    "dev": "tsup --watch",
-    "build": "tsup",
-    "prepare": "pnpm build"
-  },
   "keywords": [
     "vite",
     "vite-plugin",
@@ -28,15 +10,45 @@
     "proxy",
     "https-proxy"
   ],
-  "author": "cpsoinos <coreypsoinos@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/cpsoinos/vite-plugin-http2-proxy/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cpsoinos/vite-plugin-http2-proxy"
   },
-  "bugs": {
-    "url": "https://github.com/cpsoinos/vite-plugin-http2-proxy/issues"
-  },
   "license": "ISC",
+  "author": "cpsoinos <coreypsoinos@gmail.com>",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "package.json": [
+      "npx sort-package-json"
+    ],
+    "*.{js,jsx,ts,tsx,cjs,mjs,cts,mts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,postcss,json,html,md,yml}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "http2-proxy": "^5.0.53"
   },
@@ -44,6 +56,8 @@
     "@cpsoinos/eslint-config-typescript": "^0.2.5",
     "@cpsoinos/prettier-config": "^1.0.0",
     "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3",
