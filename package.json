@@ -1,0 +1,23 @@
+{
+  "name": "vite-plugin-http2-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Corey Psoinos <coreypsoinos@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "http2-proxy": "^5.0.53"
+  },
+  "devDependencies": {
+    "@cpsoinos/eslint-config-typescript": "^0.2.5",
+    "@cpsoinos/prettier-config": "^1.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4"
+  }
+}
