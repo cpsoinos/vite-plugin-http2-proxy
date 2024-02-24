@@ -35,7 +35,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "ci:publish": "changeset publish",
+    "ci:publish": "pnpm build && changeset publish",
     "ci:version": "changeset version",
     "dev": "tsup --watch",
     "format": "prettier --write .",
