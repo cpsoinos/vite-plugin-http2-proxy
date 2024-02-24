@@ -35,7 +35,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "ci:publish": "changeset publish",
+    "ci:format": "prettier --write --check --no-error-on-unmatched-pattern \"**/*.{js,jsx,ts,tsx,md,json,yml,yaml}\"",
+    "ci:publish": "pnpm build && changeset publish",
     "ci:version": "changeset version",
     "dev": "tsup --watch",
     "format": "prettier --write .",
